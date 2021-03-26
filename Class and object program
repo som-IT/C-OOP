@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+class Product {
+public:
+    int itemNo;
+    string itemName;    // data members
+
+    void showProduct() {    // member function
+
+        cout<<"Item No: "<<itemNo<<endl;
+        cout<<"Item Name: "<<itemName<<endl;
+    }
+
+};
+
+int main()
+{
+    Product p1, p2;;
+
+    p1.itemNo = 1001;
+    p1.itemName = "Coffee";
+
+    p2.itemNo = 1002;
+    p2.itemName = "Books";
+
+    cout << "First item " << endl;
+    p1.showProduct();
+
+    cout << "Second item " << endl;
+    p2.showProduct();
+    return 0;
+}
