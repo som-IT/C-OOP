@@ -1,0 +1,26 @@
+#include <iostream>
+// Constructor
+using namespace std;
+class Employee {
+private:
+    int emp_id;
+    string emp_name;
+public:
+    Employee(int id, string n) {
+        emp_id = id;
+        emp_name = n;
+    }
+
+    void displayData() {
+        cout<<emp_id<<endl<<emp_name<<endl;
+    }
+};
+int main()
+{
+    Employee e1(100, "Ali"), e2(200, "Hassan");
+
+    e1.displayData();
+    e2.displayData();
+
+    return 0;
+}
