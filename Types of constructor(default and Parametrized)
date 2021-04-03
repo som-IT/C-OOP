@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+class Addition {
+
+private:
+    int x, y;
+public:
+    Addition() {
+        x = 5;
+        y = 7;
+    }
+
+    Addition(int a, int b) {
+        x = a;
+        y = b;
+    }
+
+    void display() {
+        cout<<"Value of x: "<<x<<endl;
+        cout<<"Value of y: "<<y<<endl;
+        cout<<"Addition: "<<x+y<<endl;
+    }
+};
+int main()
+{
+    Addition obj1(11, 4), obj2(12, 6), obj3;
+    obj1.display();
+    obj2.display();
+    obj3.display();
+    return 0;
+}
