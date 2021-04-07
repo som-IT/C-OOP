@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+class Example {
+private:
+    int x, y;
+public:
+
+    // parameterized constructor
+    Example(int a, int b) {
+        x = a;
+        y = b;
+    }
+    // copy constructor
+    Example(const Example &copyobj) {
+            x = copyobj.x;
+            y = copyobj.y;
+        }
+
+    void display() {
+        cout<<"Value of x "<<x<<endl;
+        cout<<"Value of y "<<y<<endl;
+    }
+};
+
+int main()
+{
+    Example obj1(30, 25);
+    Example obj2(obj1);
+    //below obj2 is same as above
+   // Example obj2 = obj1;
+    cout<<"Parameterized constructor"<<endl;
+    obj1.display();
+    cout<<"Copy constructor"<<endl;
+    obj2.display();
+
+    return 0;
+}
