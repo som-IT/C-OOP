@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+class Student {
+private:
+    string name;
+    float marks;
+public:
+    // parameterized constructor with default value
+    Student(string n, float m = 33.5) {
+        name = n;
+        marks = m;
+    }
+
+    // default constructor
+    Student() {
+        name = "Not-given";
+        marks = 0;
+    }
+
+    void display() {
+        cout<<"Name: "<<name<<endl;
+        cout<<"Marks: "<<marks<<endl;
+    }
+
+};
+int main()
+{
+    Student s1("Ali", 75.4), s2, s3("Elmi");
+
+    cout<<"Student 1 details"<<endl;
+    s1.display();
+
+    cout<<"Student 2 details"<<endl;
+    s2.display();
+
+    cout<<"Student 3 details"<<endl;
+    s3.display();
+    return 0;
+}
