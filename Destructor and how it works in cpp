@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+class Addition {
+private:
+    int x, y;
+public:
+    Addition(int v1, int v2) {
+    x = v1;
+    y = v2;
+    }
+    void display() {
+    cout<<"Addition of x and y = "<<x+y<<endl;
+    }
+
+    ~Addition() {
+    cout<<"Destructor function is called!"<<endl;
+    }
+
+};
+int main()
+{
+    Addition obj1(10, 30);
+
+    obj1.display();
+    cout<<"Object two data "<<endl;
+    Addition obj2(55,44);
+    obj2.display();
+    return 0;
+}
