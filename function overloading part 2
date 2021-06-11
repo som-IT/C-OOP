@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+class FunOver {
+private:
+    int x;
+    float y;
+    char ch;
+public:
+    FunOver() {
+    y = x = 1;
+    ch = NULL;
+    }
+
+    int test(int a, float b) {
+        x = a;
+        y = b;
+    }
+
+    int test(float b, char c) {
+        y = b;
+        ch = c;
+    }
+
+     int test(int a, float b, char c) {
+        x = a;
+        y = b;
+        ch = c;
+    }
+
+    int test(char c) {
+        ch = c;
+    }
+
+
+    void display() {
+    cout<<"Value of X: "<<x<<endl;
+    cout<<"Value of Y: "<<y<<endl;
+    cout<<"Value of ch: "<<ch<<endl;
+    }
+};
+int main()
+{
+    FunOver obj1;
+
+    obj1.test(43, 49.3f, 'B');
+    obj1.display();
+    return 0;
+}
