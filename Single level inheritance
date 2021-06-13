@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+class BaseClass {
+public:
+    int x;
+
+    void getXValue() {
+        cout<<"Enter X value: ";
+        cin>>x;
+    }
+};
+
+class DerivedClass: public BaseClass {
+private:
+    int y;
+public:
+
+    void getYValue() {
+        cout<<"Enter Y value: ";
+        cin>>y;
+    }
+
+    void Addition() {
+        cout<<"Addition of X and Y = "<<x+y;
+    }
+};
+int main()
+{
+    DerivedClass obj;
+    obj.getXValue();
+    obj.getYValue();
+    obj.Addition();
+
+    return 0;
+}
