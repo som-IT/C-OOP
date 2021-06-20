@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+class BaseClass {
+private:
+    int z=5;
+protected:
+    int w=15;
+public:
+    int x=10;
+};
+
+class DerivedClass:  private BaseClass {
+private:
+    int y=30;
+protected:
+    int a=40;
+public:
+
+    void Addition() {
+        cout<<"Addition of X and Y = "<<x+y+w;
+    }
+};
+int main()
+{
+    DerivedClass obj;
+    obj.Addition();
+
+    return 0;
+}
