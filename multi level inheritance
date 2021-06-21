@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+class baseClass {
+public:
+    int x;
+
+    void getXValue() {
+    cout<<"Enter X value: ";
+    cin>>x;
+    }
+};
+
+class derivedClass: public baseClass {
+public:
+    int y, result =0;
+
+    void getYValue() {
+    cout<<"Enter Y value: ";
+    cin>>y;
+    }
+    void Addition() {
+    result = x+y;
+    cout<<"Addition of X and Y: "<<result<<endl;
+    }
+};
+
+class derivedClass2: public derivedClass {
+public:
+
+    void checkEvenOdd() {
+    if(result%2 ==0) {
+    cout<<"Result is Even.";
+    }else {
+    cout<<"Result is Odd.";
+    }
+    }
+};
+int main()
+{
+    derivedClass2 obj;
+
+    obj.getXValue();
+    obj.getYValue();
+    obj.Addition();
+    obj.checkEvenOdd();
+    return 0;
+}
