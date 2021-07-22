@@ -1,0 +1,64 @@
+#include <iostream>
+
+using namespace std;
+
+class baseClass {
+public:
+    int x,y;
+
+    void getValue() {
+    cout<<"Enter X value: ";
+    cin>>x;
+    cout<<"Enter Y value: ";
+    cin>>y;
+    }
+};
+
+class derivedClass1: public baseClass {
+public:
+    int result;
+
+    void addition() {
+    result = x+y;
+    cout<<"Addition of x and y: "<<result<<endl;
+    }
+};
+
+class derivedClass2: public baseClass {
+public:
+    int result;
+
+    void sub() {
+    result = x-y;
+    cout<<"Subtraction of x and y: "<<result<<endl;
+    }
+};
+
+class hybrid: public derivedClass2 {
+public:
+    void evenOdd() {
+    if(result %2 ==0) {
+        cout<<"Result is even";
+    }else {
+        cout<<"Result is odd";
+    }
+    }
+};
+
+int main()
+{
+    derivedClass1 obj1;
+
+    hybrid obj3;
+
+    // derived class one
+    obj1.getValue();
+    obj1.addition();
+
+    //hyrbrid
+    obj3.getValue();
+    obj3.sub();
+    obj3.evenOdd();
+
+    return 0;
+}
