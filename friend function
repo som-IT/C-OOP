@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+class Addition {
+private:
+    int x, y;
+    friend int result(Addition obj);
+
+public:
+    // constructor
+    Addition(int v1, int v2): x(v1), y(v2) {}
+
+    // member function
+    int result2() {
+    return x+y;
+    }
+};
+
+int result(Addition obj) {
+    return obj.x + obj.y;
+}
+int main()
+{
+    Addition ob(13, 8);
+
+    cout <<result(ob)<< endl;
+
+    // using member function
+
+    cout<<ob.result2()<<endl;
+    return 0;
+}
