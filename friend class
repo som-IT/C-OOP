@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class Data {
+private:
+    int a = 10;
+     friend class Result;
+protected:
+    int b = 20;
+
+
+};
+
+class Result {
+public:
+    int c = 30;
+    void show() {
+        Data obj;
+        cout<< c + obj.a + obj.b<<endl;
+    }
+
+
+};
+
+
+
+int main()
+{
+    Result r;
+    r.show();
+    return 0;
+}
