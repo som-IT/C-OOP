@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+class Data {
+private:
+    int x;
+public:
+    Data(int v): x(v) {}
+
+   friend int operator + (Data obj, int val);
+
+    void display() {
+    cout<<"X value = "<<x<<endl;
+    }
+};
+
+int operator + (Data obj, int val) {
+    cout<<obj.x<<endl;
+    cout<<val<<endl;
+    return obj.x +val;
+}
+
+int main()
+{
+    Data obj1(60);
+
+    Data obj2 = obj1 + 15;
+
+    obj2.display();
+    return 0;
+}
