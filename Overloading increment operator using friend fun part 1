@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+class Test {
+private:
+    int x;
+public:
+    Test(int v): x(v) {}
+
+    friend void operator ++(Test &obj1);
+
+    void show() {
+        cout << "X value: "<<x <<endl;
+    }
+};
+
+void operator ++(Test &obj1) {
+    obj1.x++;
+}
+int main()
+{
+    Test obj(9);
+
+    ++obj;
+    obj.show();
+    return 0;
+}
