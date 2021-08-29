@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class BaseClass {
+public:
+    int x;
+    BaseClass(): x(10) {}
+};
+
+class D1: public virtual BaseClass {
+public:
+    int y;
+    D1(): y(20) {}
+};
+
+class D2: public virtual BaseClass {
+public:
+    int z;
+    D2(): z(30) {}
+};
+
+class D3: public D1, public D2 {
+public:
+    void show() {
+    cout<<"X value "<<x<<endl;
+    cout<<"Y value "<<y<<endl;
+    cout<<"Z value "<<z<<endl;
+    }
+};
+int main()
+{
+    D3 obj;
+    obj.show();
+    return 0;
+}
