@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+class Students {
+private:
+    int id;
+    string name;
+public:
+
+    Students(int id, string name) {
+        (*this).id = id;
+        (*this).name = name;
+    }
+
+    void display() {
+        cout<<"Student id: "<<id<<endl;
+        cout<<"Student name: "<<name<<endl;
+        cout<<"--------------------"<<endl;
+    }
+};
+
+int main()
+{
+    Students s1(1001, "Ali"), s2(1002, "Abdi");
+
+    s1.display();
+    s2.display();
+    return 0;
+}
