@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+class Base {  // Abstract class
+public:
+    virtual void show() = 0;  // pure virtual function
+    void display() {
+
+    cout<<"Test base class"<<endl;
+    }
+};
+
+class Derived: public Base {
+public:
+    void show() {
+        cout<<"This is pure virtual function in  derived class"<<endl;
+    }
+
+};
+int main()
+{
+    Derived obj;
+
+    obj.show();
+    obj.display();
+
+    return 0;
+}
