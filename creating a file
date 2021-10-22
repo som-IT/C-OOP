@@ -1,0 +1,18 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    fstream file;
+    file.open("E:\\all files\\firstfile.txt", ios::out);
+    if(!file) {
+        cout<<"File creation failed!";
+    }
+    else {
+        cout<<"Successfully created a file";
+        file.close();
+    }
+
+    return 0;
+}
