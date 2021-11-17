@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    fstream fl;
+    string data = "My third file created!";
+    fl.open("E:\\all files\\test.txt", ios::app);
+    if(!fl) {
+        cout<<"File open failed!"<<endl;
+    } else {
+        cout<<"File open success!"<<endl;
+
+        fl << data << endl;
+        fl.close();
+    }
+    return 0;
+}
