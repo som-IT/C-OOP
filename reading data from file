@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ifstream fl;
+    string data;
+    fl.open("E:\\all files\\test.txt", ios::in);
+    if(!fl) {
+        cout<<"File open failed!"<<endl;
+    } else {
+        cout<<"File open success!"<<endl;
+
+        if(fl.is_open()) {
+                while(fl){
+                getline(fl, data);
+                cout<<data <<endl;
+                }
+        }
+        fl.close();
+    }
+    return 0;
+}
