@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    fstream file;
+    string data = "Hello Do you see my program";
+
+    file.open("E:\\all files\\myfile.txt", ios::out | ios::in);
+    if(!file){
+        cout<<"File open failed!"<<endl;
+    }else {
+        cout<<"File open success!"<<endl;
+
+        file << data;
+
+        string d;
+        int pos;
+        pos = file.tellp();
+        //cout<<pos;
+        file.seekp(0);
+        if(file.is_open()) {
+            while(file){
+                d = file.get();
+                cout<<d;
+            }
+        }
+        file.close();
+    }
+
+    return 0;
+}
